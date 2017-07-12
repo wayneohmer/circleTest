@@ -1,0 +1,65 @@
+{
+    "result": "success",
+    "manufacturer": "SuperRouter",
+    "model": "Fast Plus A4000-N",
+    "reachability": 1,
+    "firmwareUpdateAvailable": 1,
+    "devices": [{
+                "name": "Billy's phone",
+                "manufacturer": "Apple",
+                "model": "iPhone 7",
+                "type": "Phone",
+                "mac": "80:00:00:00:00:AC",
+                "serial": "7200000NA1",
+                "connectedStatus": 0
+                },
+                {
+                "name": "Betty's phone",
+                "manufacturer": "Samsung",
+                "model": "Galaxy S7",
+                "type": "Phone",
+                "mac": "80:00:00:00:00:BD",
+                "serial": "9800000NA1",
+                "connectedStatus": 1
+                },
+                {
+                "name": "Betty's laptop",
+                "manufacturer": "Asus",
+                "type": "PC",
+                "model": "P4483K-MN332",
+                "mac": "80:00:00:00:00:7C",
+                "serial": "3600000NA1",
+                "connectedStatus": 1
+                }
+                ],
+    "visited": [{
+                "date": "2017-03-14",
+                "mac": "80:00:00:00:00:BD",
+                "sites": [{
+                          "domain": "yahoo.com"
+                          },
+                          {
+                          "domain": "facebook.com"
+                          }
+                          ]
+                },
+                {
+                "date": "2017-03-15",
+                "mac": "80:00:00:00:00:BD",
+                "sites": [{
+                          "domain": "google.com"
+                          },
+                          {
+                          "domain": "youtube.com"
+                          }
+                          ]
+                },
+                {
+                "date": "2017-03-15",
+                "mac": "80:00:00:00:00:7C",
+                "sites": [{
+                          "domain": "google.com"
+                          }]
+                }
+                ]
+}
