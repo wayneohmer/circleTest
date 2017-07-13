@@ -40,7 +40,7 @@ class CircleTestTests: XCTestCase {
     
     func testRouterStatus() {
 
-        XCTAssertNotNil(self.routerStatusTest,"routerStatus object is nil")
+        XCTAssertNotNil(self.routerStatusTest)
         //Bail if we don't have an object to test.
         if self.routerStatusTest == nil {
             return
