@@ -1,1 +1,1 @@
-# circleTest Coding project for Circle
+Coding project for Circle
