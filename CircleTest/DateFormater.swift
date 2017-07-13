@@ -10,8 +10,8 @@ import UIKit
 
 extension DateFormatter {
     
-    convenience init(dateFormat:String)
-    {
+    //Apple should really do this...
+    convenience init(dateFormat:String) {
         self.init()
         self.dateFormat = dateFormat
     }

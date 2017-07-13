@@ -25,18 +25,24 @@ class RouterDevice: NSObject {
     var model = ""
     var type = ""
     var mac = ""
+    var serial = "serial"
+
+    // optional to accomdate -1 for "unknown"
     var connectedStatus:Bool? = nil
     
     convenience init(dict:[String:Any]) {
+        
         self.init()
         self.name = dict[JSONKeys.name] as? String ?? ""
         self.manufacturer = dict[JSONKeys.manufacturer] as? String ?? ""
         self.model = dict[JSONKeys.model] as? String ?? ""
         self.type = dict[JSONKeys.type] as? String ?? ""
         self.mac = dict[JSONKeys.mac] as? String ?? ""
+        self.serial = dict[JSONKeys.serial] as? String ?? ""
         if let connectedInt = dict[JSONKeys.connectedStatus] as? Int {
             // leave connectedSatus nil if "unknown"  
-            // intergers that are not -1 or 1 will result in connectedStatus false.
+            // intergers that are not -1 or 1 will result in connectedStatus false. 
+            // could make nil for bad data? depends on error handling.  
             if connectedInt != -1 {
                 self.connectedStatus = connectedInt == 1
             }

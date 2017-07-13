@@ -31,17 +31,19 @@ class RouterStatus: NSObject {
     var visited = [RouterVisited]()
 
     convenience init(dict:[String:Any]) {
+        
         self.init()
         self.result = dict[JSONKeys.result] as? String ?? ""
         self.manufacturer = dict[JSONKeys.manufacturer] as? String ?? ""
         self.model = dict[JSONKeys.model] as? String ?? ""
+        
         if let reachable = dict[JSONKeys.reachability] as? Int {
-            //assuming anything other than 1 is false. Could error out here.
+            //assuming anything other than 1 is false. Could error out here if reachable != 0 or 1
             self.reachability = reachable == 1
         }
         
         if let firmwareUpdate = dict[JSONKeys.firmwareUpdateAvailable] as? Int {
-            //assuming anything other than 1 is false.
+            //assuming anything other than 1 is false. Could error out here if firmwareUpdate != 0 or 1
             self.firmwareUpdateAvailable = firmwareUpdate == 1
         }
         
